@@ -1,4 +1,4 @@
-http://localhost/api_login/public/api/_Log_In
+http://localhost/laravel/public/api/_Log_In
 {
 	"username": "admin",
 	"password": "admin"
@@ -8,7 +8,7 @@ http://localhost/api_login/public/api/_Log_In
 
 
 
-http://localhost/api_login/public/api/_Sexo_Datos
+http://localhost/laravel/public/api/_Sexo_Datos
 {
   "token": "5551e277f27d7f871eb822458f469b5b",
   "credenciales": {
@@ -22,7 +22,7 @@ http://localhost/api_login/public/api/_Sexo_Datos
 
 
 
-http://localhost/api_login/public/api/_Sexo_Xid
+http://localhost/laravel/public/api/_Sexo_Xid
 {
   "token": "5551e277f27d7f871eb822458f469b5b",
   "credenciales": {
@@ -38,7 +38,7 @@ http://localhost/api_login/public/api/_Sexo_Xid
 
 
 
-http://localhost/api_login/public/api/_Sexo_Agregar
+http://localhost/laravel/public/api/_Sexo_Agregar
 {
   "token": "5551e277f27d7f871eb822458f469b5b",
   "credenciales": {
@@ -55,7 +55,7 @@ http://localhost/api_login/public/api/_Sexo_Agregar
 
 
 
-http://localhost/api_login/public/api/_Sexo_Editar
+http://localhost/laravel/public/api/_Sexo_Editar
 {
   "token": "5551e277f27d7f871eb822458f469b5b",
   "credenciales": {
@@ -73,7 +73,7 @@ http://localhost/api_login/public/api/_Sexo_Editar
 
 
 
-http://localhost/api_login/public/api/_Sexo_Eliminar
+http://localhost/laravel/public/api/_Sexo_Eliminar
 {
   "token": "5551e277f27d7f871eb822458f469b5b",
   "credenciales": {
