@@ -155,7 +155,7 @@ class SexoController extends Controller
         if ($this->AccessToken($data['token'], $data['credenciales'], $Usr, $errors)) {
 
             $validator = Validator::make($data['data'], [
-                'cat_sexo' => 'required',
+                'sexo' => 'required',
                 'activo' => 'required',
             ]);
 
@@ -168,11 +168,11 @@ class SexoController extends Controller
                 try {
 
                     $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
-                    $cat_sexo = $data['data']['cat_sexo'] ?? null;
+                    $sexo = $data['data']['sexo'] ?? null;
                     $activo = $data['data']['activo'] ?? null;
 
                     $insertId = DB::table('cat_sexo')->insertGetId([
-                        "cat_sexo" => $cat_sexo,
+                        "sexo" => $sexo,
                         "activo" => $activo,
                     ]);
 
@@ -231,7 +231,7 @@ class SexoController extends Controller
 
             $validator = Validator::make($data['data'], [
                 'id_cat_sexo' => '',
-                'cat_sexo' => 'required',
+                'sexo' => 'required',
                 'activo' => 'required',
             ]);
 
@@ -244,13 +244,13 @@ class SexoController extends Controller
                 try {
 
                     $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
-                    $cat_sexo = $data['data']['cat_sexo'] ?? null;
+                    $sexo = $data['data']['sexo'] ?? null;
                     $activo = $data['data']['activo'] ?? null;
 
                     $update = DB::table('cat_sexo')
                         ->where('cat_sexo.id_cat_sexo', '=', $id_cat_sexo)
                         ->update([
-                            "cat_sexo" => $cat_sexo,
+                            "sexo" => $sexo,
                             "activo" => $activo
                         ]);
 
