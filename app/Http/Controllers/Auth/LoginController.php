@@ -59,7 +59,7 @@ class LoginController extends Controller
                         $status = 400;
                         $message = "Datos incorrectos.";
                         $data = array();
-                        DB::commit();
+                        DB::rollback();
                     }
 
                 } else {
@@ -67,7 +67,7 @@ class LoginController extends Controller
                     $status = 400;
                     $message = "Datos incorrectos.";
                     $data = array();
-                    DB::commit();
+                    DB::rollback();
                 }
 
                 $response = [

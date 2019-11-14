@@ -40,7 +40,7 @@ class SexoController extends Controller
                         $status = 400;
                         $message = "Datos no encontrados.";
                         $data = array();
-                        DB::commit();
+                        DB::rollback();
                     }
 
                     $response = [
@@ -112,7 +112,7 @@ class SexoController extends Controller
                         $status = 400;
                         $message = "Datos no encontrados.";
                         $data = array();
-                        DB::commit();
+                        DB::rollback();
                     }
 
                     $response = [
@@ -187,7 +187,7 @@ class SexoController extends Controller
                         $status = 400;
                         $message = "Error al agregar.";
                         $data = array();
-                        DB::commit();
+                        DB::rollback();
                     }
 
                     $response = [
@@ -265,7 +265,7 @@ class SexoController extends Controller
                         $status = 400;
                         $message = "Error al actualizar.";
                         $data = array();
-                        DB::commit();
+                        DB::rollback();
                     }
 
                     $response = [
@@ -336,7 +336,7 @@ class SexoController extends Controller
                         $status = 400;
                         $message = "Error al eliminar.";
                         $data = array();
-                        DB::commit();
+                        DB::rollback();
                     }
 
                     $response = [
