@@ -30,7 +30,7 @@ http://localhost/api_login/public/api/_Sexo_Xid
     "username": "admin"
   },
   "data": {
-    "id_sexo": 2
+    "id_cat_sexo": 2
   }
 }
 
@@ -63,7 +63,7 @@ http://localhost/api_login/public/api/_Sexo_Editar
     "username": "admin"
   },
   "data": {
-    "id_sexo": 3,
+    "id_cat_sexo": 3,
     "sexo": "Indistinto",
     "activo": 1
   }
@@ -81,6 +81,6 @@ http://localhost/api_login/public/api/_Sexo_Eliminar
     "username": "admin"
   },
   "data": {
-    "id_sexo": 3
+    "id_cat_sexo": 3
   }
 }

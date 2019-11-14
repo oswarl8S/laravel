@@ -184,7 +184,7 @@ class UsuarioController extends Controller
 
             $validator = Validator::make($data['data'], [
                 'id_usuario' => '',
-                'id_sexo' => 'required',
+                'id_cat_sexo' => 'required',
                 'username' => 'required',
                 'password' => 'required',
                 'nombre' => 'required',
@@ -202,7 +202,7 @@ class UsuarioController extends Controller
 
                 try {
 
-                    $id_sexo = $data['data']['id_sexo'] ?? null;
+                    $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
                     $username = $data['data']['username'] ?? null;
                     $password = $data['data']['password'] ?? null;
                     $nombre = $data['data']['nombre'] ?? null;
@@ -230,7 +230,7 @@ class UsuarioController extends Controller
                     }
 
                     $insertId = DB::table('usuario')->insertGetId([
-                        "id_sexo" => $id_sexo,
+                        "id_cat_sexo" => $id_cat_sexo,
                         "username" => $username,
                         "password" => $password,
                         "nombre" => $nombre,
@@ -295,7 +295,7 @@ class UsuarioController extends Controller
 
             $validator = Validator::make($data['data'], [
                 'id_usuario' => 'required',
-                'id_sexo' => 'required',
+                'id_cat_sexo' => 'required',
                 'username' => 'required',
                 'password' => 'required',
                 'nombre' => 'required',
@@ -314,7 +314,7 @@ class UsuarioController extends Controller
                 try {
 
                     $id_usuario = $data['data']['id_usuario'] ?? null;
-                    $id_sexo = $data['data']['id_sexo'] ?? null;
+                    $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
                     $username = $data['data']['username'] ?? null;
                     $password = $data['data']['password'] ?? null;
                     $nombre = $data['data']['nombre'] ?? null;
@@ -349,7 +349,7 @@ class UsuarioController extends Controller
                     $update = DB::table('usuario')
                         ->where('usuario.id_usuario', '=', $id_usuario)
                         ->update([
-                            "id_sexo" => $id_sexo,
+                            "id_cat_sexo" => $id_cat_sexo,
                             "username" => $username,
                             "password" => $password,
                             "nombre" => $nombre,

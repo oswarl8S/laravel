@@ -25,8 +25,8 @@ class SexoController extends Controller
 
                 try {
 
-                    $result = DB::table('sexo')
-                        ->select('sexo.*')
+                    $result = DB::table('cat_sexo')
+                        ->select('cat_sexo.*')
                         ->get();
 
                     if ($result) {
@@ -83,7 +83,7 @@ class SexoController extends Controller
         if ($this->AccessToken($data['token'], $data['credenciales'], $Usr, $errors)) {
 
             $validator = Validator::make($data['data'], [
-                'id_sexo' => 'required',
+                'id_cat_sexo' => 'required',
             ]);
 
             $flag = false;
@@ -94,11 +94,11 @@ class SexoController extends Controller
 
                 try {
 
-                    $id_sexo = $data['data']['id_sexo'];
+                    $id_cat_sexo = $data['data']['id_cat_sexo'];
 
-                    $row = DB::table('sexo')
-                        ->select('sexo.*')
-                        ->where('sexo.id_sexo', '=', $id_sexo)
+                    $row = DB::table('cat_sexo')
+                        ->select('cat_sexo.*')
+                        ->where('cat_sexo.id_cat_sexo', '=', $id_cat_sexo)
                         ->first();
 
                     if ($row) {
@@ -155,7 +155,7 @@ class SexoController extends Controller
         if ($this->AccessToken($data['token'], $data['credenciales'], $Usr, $errors)) {
 
             $validator = Validator::make($data['data'], [
-                'sexo' => 'required',
+                'cat_sexo' => 'required',
                 'activo' => 'required',
             ]);
 
@@ -167,12 +167,12 @@ class SexoController extends Controller
 
                 try {
 
-                    $id_sexo = $data['data']['id_sexo'] ?? null;
-                    $sexo = $data['data']['sexo'] ?? null;
+                    $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
+                    $cat_sexo = $data['data']['cat_sexo'] ?? null;
                     $activo = $data['data']['activo'] ?? null;
 
-                    $insertId = DB::table('sexo')->insertGetId([
-                        "sexo" => $sexo,
+                    $insertId = DB::table('cat_sexo')->insertGetId([
+                        "cat_sexo" => $cat_sexo,
                         "activo" => $activo,
                     ]);
 
@@ -230,8 +230,8 @@ class SexoController extends Controller
         if ($this->AccessToken($data['token'], $data['credenciales'], $Usr, $errors)) {
 
             $validator = Validator::make($data['data'], [
-                'id_sexo' => '',
-                'sexo' => 'required',
+                'id_cat_sexo' => '',
+                'cat_sexo' => 'required',
                 'activo' => 'required',
             ]);
 
@@ -243,14 +243,14 @@ class SexoController extends Controller
 
                 try {
 
-                    $id_sexo = $data['data']['id_sexo'] ?? null;
-                    $sexo = $data['data']['sexo'] ?? null;
+                    $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
+                    $cat_sexo = $data['data']['cat_sexo'] ?? null;
                     $activo = $data['data']['activo'] ?? null;
 
-                    $update = DB::table('sexo')
-                        ->where('sexo.id_sexo', '=', $id_sexo)
+                    $update = DB::table('cat_sexo')
+                        ->where('cat_sexo.id_cat_sexo', '=', $id_cat_sexo)
                         ->update([
-                            "sexo" => $sexo,
+                            "cat_sexo" => $cat_sexo,
                             "activo" => $activo
                         ]);
 
@@ -308,7 +308,7 @@ class SexoController extends Controller
         if ($this->AccessToken($data['token'], $data['credenciales'], $Usr, $errors)) {
 
             $validator = Validator::make($data['data'], [
-                'id_sexo' => 'required',
+                'id_cat_sexo' => 'required',
             ]);
 
             $flag = false;
@@ -319,10 +319,10 @@ class SexoController extends Controller
 
                 try {
 
-                    $id_sexo = $data['data']['id_sexo'] ?? null;
+                    $id_cat_sexo = $data['data']['id_cat_sexo'] ?? null;
 
-                    $delete = DB::table('sexo')
-                        ->where('sexo.id_sexo', '=', $id_sexo)
+                    $delete = DB::table('cat_sexo')
+                        ->where('cat_sexo.id_cat_sexo', '=', $id_cat_sexo)
                         ->delete();
 
                     if ($delete) {
