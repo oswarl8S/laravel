@@ -1,6 +1,7 @@
 
 
 Carpetas y archivos principales:
+- colocar esta carpeta en htdocs o en www
 - instalar composer en tu pc/lap
 - si abres composer.json con phpstorm te aparecera install en la parte superior derecha
 - archivo laravel.sql: importar con phpmyadmin
